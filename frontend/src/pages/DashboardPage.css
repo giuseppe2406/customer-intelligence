@@ -1,0 +1,18 @@
+.diagramm-block {
+  margin-top: var(--abstand-48);
+}
+
+.diagramm-block .abschnitt-titel {
+  margin-bottom: var(--abstand-16);
+}
+
+/* Das dritte Diagramm ist das kleinste: es zeigt nur drei Anzahlen und
+   braucht die volle Breite nicht. */
+.diagramm-klein {
+  max-width: 640px;
+}
+
+.kernaussage {
+  margin-top: var(--abstand-12);
+  color: var(--text-secondary);
+}

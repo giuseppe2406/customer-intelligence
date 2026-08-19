@@ -1,0 +1,58 @@
+/* Einzige Linie im Diagramm: die Grundlinie unter den Balken. Kein Gitternetz,
+   keine senkrechten Linien. */
+.diagramm {
+  padding-bottom: var(--abstand-8);
+  border-bottom: 1px solid var(--gridline);
+}
+
+.balken-zeile {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: var(--abstand-12);
+}
+
+/* 2px laut DESIGN.md, bewusst ausserhalb der Abstandsskala. */
+.balken-zeile + .balken-zeile {
+  margin-top: 2px;
+}
+
+.balken-name {
+  font-size: var(--schrift-klein);
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.balken-spur {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+/* Der Balken setzt an der Grundlinie an, deshalb ist nur das Datenende
+   gerundet. */
+.balken {
+  flex: none;
+  height: 100%;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--accent);
+}
+
+.balken-hoch {
+  background: var(--risk-high);
+}
+
+.balken-mittel {
+  background: var(--risk-medium);
+}
+
+.balken-niedrig {
+  background: var(--risk-low);
+}
+
+.balken-wert {
+  margin-left: var(--abstand-8);
+  font-size: var(--schrift-klein);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

@@ -1,0 +1,50 @@
+HELP.md
+target/
+
+### Zugangsdaten ###
+application.properties
+analytics/.env
+
+### Datensatz (nicht mitgeliefert, siehe README) ###
+analytics/data/*.csv
+
+### Interne Notizen, nicht Teil des Repositories ###
+docs/lernnotizen/
+CLAUDE.md
+
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Python ###
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

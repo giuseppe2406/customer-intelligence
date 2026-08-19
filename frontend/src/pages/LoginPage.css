@@ -1,0 +1,33 @@
+.anmeldung {
+  padding: var(--abstand-32);
+}
+
+.anmeldung-projekt {
+  font-size: var(--schrift-seitentitel);
+  font-weight: 600;
+  line-height: var(--zeilenhoehe-zahl);
+}
+
+.anmeldung-titel {
+  margin-top: var(--abstand-48);
+  font-size: var(--schrift-abschnitt);
+}
+
+.anmeldung-formular {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--abstand-16);
+  margin-top: var(--abstand-24);
+  /* Begrenzt nur die Feldbreite - das Formular bleibt linksbuendig und ist
+     keine zentrierte Inhaltsspalte. */
+  width: 280px;
+}
+
+.anmeldung-formular .feld {
+  width: 100%;
+}
+
+.anmeldung-meldung {
+  color: var(--risk-high);
+}

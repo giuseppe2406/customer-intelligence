@@ -1,0 +1,37 @@
+.arbeitsliste-kopf {
+  display: flex;
+  flex-direction: column;
+  gap: var(--abstand-4);
+}
+
+.arbeitsliste-zusammenfassung {
+  font-size: var(--schrift-abschnitt);
+  font-weight: 600;
+  line-height: var(--zeilenhoehe-zahl);
+}
+
+.arbeitsliste-hinweis {
+  color: var(--text-muted);
+}
+
+.arbeitsliste-steuerung {
+  display: flex;
+  justify-content: flex-end;
+  margin: var(--abstand-24) 0 var(--abstand-8);
+}
+
+.listenlaenge {
+  display: flex;
+  align-items: center;
+  gap: var(--abstand-8);
+}
+
+/* Die Beschriftung steht hier neben statt ueber dem Feld, damit die Zeile
+   ueber der Tabelle flach bleibt. */
+.listenlaenge .feld-beschriftung {
+  margin-bottom: 0;
+}
+
+.listenlaenge-auswahl {
+  width: auto;
+}

@@ -1,0 +1,61 @@
+/* Alle Gestaltungswerte aus DESIGN.md an einer Stelle. In Komponenten wird
+   ausschliesslich ueber diese Variablen gestaltet, nie ueber direkte Werte. */
+:root {
+  /* --- Farben --- */
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --border: rgba(11, 11, 11, 0.1);
+  --gridline: #e1e0d9;
+
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+
+  --accent: #2a78d6;
+  --text-auf-accent: #ffffff;
+
+  --risk-high: #d03b3b;
+  --risk-medium: #fab219;
+  --risk-low: #0ca30c;
+
+  /* Abzeichen: farbiger Text auf schwach getoentem Grund. Bei Mittel ist der
+     Text dunkler als --risk-medium, sonst reicht der Kontrast nicht. */
+  --risk-high-text: #d03b3b;
+  --risk-high-bg: rgba(208, 59, 59, 0.1);
+  --risk-medium-text: #8a6100;
+  --risk-medium-bg: rgba(250, 178, 25, 0.15);
+  --risk-low-text: #0a7a0a;
+  --risk-low-bg: rgba(12, 163, 12, 0.1);
+
+  --row-hover: rgba(11, 11, 11, 0.03);
+  --platzhalter: rgba(11, 11, 11, 0.08);
+
+  /* --- Abstaende --- */
+  /* Nach Pixelwert benannt, damit die Skala aus DESIGN.md im Code
+     wiedererkennbar bleibt. Zwischenwerte gibt es bewusst nicht. */
+  --abstand-4: 4px;
+  --abstand-8: 8px;
+  --abstand-12: 12px;
+  --abstand-16: 16px;
+  --abstand-24: 24px;
+  --abstand-32: 32px;
+  --abstand-48: 48px;
+
+  /* --- Typografie --- */
+  --schrift: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --schrift-klein: 11px;
+  --schrift-inhalt: 13px;
+  --schrift-abschnitt: 14px;
+  --schrift-seitentitel: 15px;
+  --schrift-kennzahl: 28px;
+
+  --zeilenhoehe-text: 1.45;
+  --zeilenhoehe-zahl: 1.2;
+
+  /* --- Sonstiges --- */
+  --radius: 4px;
+  --seitenleiste-breite: 220px;
+  --zeilenhoehe-tabelle: 36px;
+  --uebergang: 120ms;
+}

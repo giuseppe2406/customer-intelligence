@@ -1,0 +1,22 @@
+.platzhalterbalken {
+  display: inline-block;
+  height: var(--schrift-inhalt);
+  border-radius: var(--radius);
+  background: var(--platzhalter);
+  vertical-align: middle;
+}
+
+.leer-zustand {
+  color: var(--text-secondary);
+}
+
+.fehler-zustand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--abstand-12);
+}
+
+.fehler-text {
+  color: var(--text-secondary);
+}

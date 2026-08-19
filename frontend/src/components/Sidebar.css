@@ -1,0 +1,41 @@
+.seitenleiste {
+  width: var(--seitenleiste-breite);
+  flex-shrink: 0;
+  padding: var(--abstand-24) 0;
+  background: var(--page);
+  border-right: 1px solid var(--border);
+}
+
+.seitenleiste-projekt {
+  padding: 0 var(--abstand-16);
+  margin-bottom: var(--abstand-24);
+  font-size: var(--schrift-seitentitel);
+  font-weight: 600;
+  line-height: var(--zeilenhoehe-zahl);
+}
+
+.seitenleiste-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seitenleiste-link {
+  display: block;
+  padding: var(--abstand-8) var(--abstand-16);
+  /* Der 2px-Balken ist immer da, nur beim aktiven Eintrag farbig - sonst
+     wuerde der Text beim Wechsel um 2px springen. */
+  border-left: 2px solid transparent;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--uebergang);
+}
+
+.seitenleiste-link:hover {
+  color: var(--text-primary);
+}
+
+.seitenleiste-link.aktiv {
+  border-left-color: var(--accent);
+  color: var(--text-primary);
+}

@@ -1,0 +1,210 @@
+/* Grundlagen und die Bausteine, die auf mehreren Seiten vorkommen:
+   Formularfelder und Schaltflaechen aus DESIGN.md. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--schrift);
+  font-size: var(--schrift-inhalt);
+  line-height: var(--zeilenhoehe-text);
+  color: var(--text-primary);
+  background: var(--page);
+}
+
+/* Formularelemente erben die Schrift nicht von selbst */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  line-height: var(--zeilenhoehe-zahl);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* --- Formulare --- */
+
+.feld {
+  display: block;
+}
+
+.feld-beschriftung {
+  display: block;
+  margin-bottom: var(--abstand-4);
+  font-size: var(--schrift-klein);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.feld-eingabe {
+  width: 100%;
+  height: 32px;
+  padding: 0 var(--abstand-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: var(--schrift-inhalt);
+}
+
+.feld-eingabe:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* --- Schaltflaechen --- */
+
+.schaltflaeche-primaer,
+.schaltflaeche-sekundaer {
+  height: 32px;
+  padding: 0 var(--abstand-16);
+  border-radius: var(--radius);
+  font-size: var(--schrift-inhalt);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--uebergang), color var(--uebergang);
+}
+
+.schaltflaeche-primaer {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--text-auf-accent);
+}
+
+.schaltflaeche-primaer:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.schaltflaeche-sekundaer {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.schaltflaeche-sekundaer:hover {
+  background: var(--row-hover);
+}
+
+/* --- Tabellen --- */
+/* Global, weil die Arbeitsliste, die Kundenliste und die Kundenakte
+   dieselbe Tabelle brauchen. */
+
+.tabelle {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabelle th {
+  padding: 0 var(--abstand-12) var(--abstand-8);
+  border-bottom: 1px solid var(--gridline);
+  font-size: var(--schrift-klein);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.tabelle td {
+  height: var(--zeilenhoehe-tabelle);
+  padding: 0 var(--abstand-12);
+  border-bottom: 1px solid var(--gridline);
+}
+
+/* Der Innenabstand der Spalten steht schon in den Zellen - aussen wuerde er
+   den Inhalt von der Kante der Seite wegruecken. */
+.tabelle th:first-child,
+.tabelle td:first-child {
+  padding-left: 0;
+}
+
+.tabelle th:last-child,
+.tabelle td:last-child {
+  padding-right: 0;
+}
+
+.tabelle .zahl {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabelle-zeile {
+  cursor: pointer;
+  transition: background-color var(--uebergang);
+}
+
+.tabelle-zeile:hover {
+  background: var(--row-hover);
+}
+
+/* Der Tastaturfokus braucht ein deutlicheres Zeichen als der Mauszeiger -
+   derselbe Akzentrahmen wie bei Eingabefeldern. */
+.tabelle-zeile:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+/* --- Kennzahlen und Abschnitte --- */
+/* Global, weil Kundenakte und Dashboard dieselbe Kennzahlenreihe zeigen. */
+
+/* Kennzahlenreihe aus DESIGN.md: kein Rahmen, kein Hintergrund, nur senkrechte
+   Haarlinien. Der Abstand von 48px liegt je zur Haelfte neben der Linie. */
+.kennzahlen {
+  display: flex;
+}
+
+.kennzahl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--abstand-4);
+}
+
+.kennzahl + .kennzahl {
+  margin-left: var(--abstand-24);
+  padding-left: var(--abstand-24);
+  border-left: 1px solid var(--gridline);
+}
+
+.kennzahl-beschriftung {
+  font-size: var(--schrift-klein);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.kennzahl-wert {
+  font-size: var(--schrift-kennzahl);
+  font-weight: 600;
+  line-height: var(--zeilenhoehe-zahl);
+  font-variant-numeric: tabular-nums;
+}
+
+.kennzahl-risiko {
+  color: var(--risk-high);
+}
+
+.abschnitt-titel {
+  font-size: var(--schrift-abschnitt);
+}

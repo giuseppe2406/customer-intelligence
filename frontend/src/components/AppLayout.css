@@ -1,0 +1,16 @@
+.grundlayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.inhaltsbereich {
+  flex: 1;
+  /* Ohne min-width duerfen breite Tabellen den Flex-Bereich aufblaehen und
+     die ganze Seite bekommt einen waagerechten Rollbalken. */
+  min-width: 0;
+  padding: var(--abstand-32);
+}
+
+.inhalt {
+  padding-top: var(--abstand-24);
+}

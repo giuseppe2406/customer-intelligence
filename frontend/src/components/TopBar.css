@@ -1,0 +1,37 @@
+.kopfzeile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--abstand-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.kopfzeile-titel {
+  font-size: var(--schrift-seitentitel);
+  font-weight: 600;
+}
+
+.kopfzeile-rechts {
+  display: flex;
+  align-items: center;
+  gap: var(--abstand-12);
+}
+
+.kopfzeile-benutzer {
+  color: var(--text-secondary);
+}
+
+/* Abmelden ist eine Nebenhandlung: schlichter Text, damit der Akzent den
+   Seiteninhalt nicht mit einer weiteren Farbstelle belastet. */
+.kopfzeile-abmelden {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--uebergang);
+}
+
+.kopfzeile-abmelden:hover {
+  color: var(--text-primary);
+}

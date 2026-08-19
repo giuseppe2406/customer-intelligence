@@ -1,0 +1,25 @@
+.risikoabzeichen {
+  display: inline-block;
+  padding: 2px var(--abstand-8);
+  border-radius: var(--radius);
+  font-size: var(--schrift-klein);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.stufe-high {
+  background: var(--risk-high-bg);
+  color: var(--risk-high-text);
+}
+
+.stufe-medium {
+  background: var(--risk-medium-bg);
+  color: var(--risk-medium-text);
+}
+
+.stufe-low {
+  background: var(--risk-low-bg);
+  color: var(--risk-low-text);
+}

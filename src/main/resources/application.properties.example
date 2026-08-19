@@ -1,0 +1,18 @@
+spring.application.name=customer-intelligence
+
+spring.datasource.url=jdbc:mysql://localhost:3306/customer_intelligence
+spring.datasource.username=root
+spring.datasource.password=CHANGE_ME
+
+spring.jpa.hibernate.ddl-auto=update
+
+# Muss mindestens 32 Zeichen lang sein (HS256 braucht 256 Bit Schluessellaenge)
+app.jwt.secret=CHANGE_ME_LONG_RANDOM_STRING
+app.jwt.expiration-ms=3600000
+
+# Wird nur beim allerersten Start angelegt, wenn die users-Tabelle leer ist
+app.admin.username=admin
+app.admin.password=CHANGE_ME
+
+# Vite-Dev-Server aus Etappe 6
+app.cors.allowed-origin=http://localhost:5173

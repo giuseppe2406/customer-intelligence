@@ -1,0 +1,44 @@
+.kunden-filter {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--abstand-16);
+  margin-bottom: var(--abstand-24);
+}
+
+/* Das Suchfeld bekommt die Breite einer Kundennummer, die beiden Auswahlfelder
+   nur so viel, wie ihre laengste Beschriftung braucht. */
+.kunden-filter-suche .feld-eingabe {
+  width: 220px;
+}
+
+.kunden-filter .feld-eingabe {
+  width: auto;
+  min-width: 160px;
+}
+
+.ohne-wert {
+  color: var(--text-muted);
+}
+
+.blaetterung {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--abstand-16);
+}
+
+.blaetterung-treffer {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.blaetterung-steuerung {
+  display: flex;
+  align-items: center;
+  gap: var(--abstand-12);
+}
+
+.blaetterung-seite {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}

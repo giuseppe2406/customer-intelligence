@@ -1,0 +1,73 @@
+.zurueck-verweis {
+  margin-bottom: var(--abstand-16);
+}
+
+.akte-kopf {
+  display: flex;
+  align-items: center;
+  gap: var(--abstand-8);
+  margin-bottom: var(--abstand-24);
+}
+
+.akte-nummer {
+  font-size: var(--schrift-seitentitel);
+}
+
+.stammdaten-gruppen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--abstand-24);
+  margin-top: var(--abstand-48);
+}
+
+.stammdaten {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--abstand-16) var(--abstand-48);
+  margin: var(--abstand-12) 0 0;
+}
+
+/* dd bringt vom Browser einen linken Aussenabstand mit, der hier stoert. */
+.stammdaten-wert {
+  margin: 0;
+}
+
+.interaktionen {
+  display: block;
+  margin-top: var(--abstand-48);
+}
+
+.interaktion-formular {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--abstand-16);
+  margin: var(--abstand-16) 0 var(--abstand-24);
+}
+
+.interaktion-typ {
+  width: auto;
+  min-width: 140px;
+}
+
+.interaktion-inhalt {
+  flex: 1;
+  max-width: 640px;
+}
+
+/* Das Textfeld darf wachsen, die feste Hoehe der Eingabefelder passt hier nicht. */
+.interaktion-textfeld {
+  height: auto;
+  padding: var(--abstand-8);
+  line-height: var(--zeilenhoehe-text);
+  resize: vertical;
+}
+
+.interaktion-fehler {
+  margin-bottom: var(--abstand-16);
+  color: var(--text-secondary);
+}
+
+.tabelle .datum {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

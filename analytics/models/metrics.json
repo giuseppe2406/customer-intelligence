@@ -1,0 +1,46 @@
+{
+  "modell": "Logistic Regression (balanced)",
+  "schwellenwert": 0.4,
+  "kennzahlen_bei_schwellenwert_0_5": {
+    "precision": 0.506,
+    "recall": 0.773,
+    "f1": 0.612,
+    "roc_auc": 0.839,
+    "accuracy": 0.74
+  },
+  "kennzahlen_bei_gewaehltem_schwellenwert": {
+    "precision": 0.468,
+    "recall": 0.858,
+    "f1": 0.606
+  },
+  "alle_modelle_schwellenwert_0_5": {
+    "Logistic Regression": {
+      "precision": 0.636,
+      "recall": 0.545,
+      "f1": 0.587,
+      "roc_auc": 0.839,
+      "accuracy": 0.796
+    },
+    "Logistic Regression (balanced)": {
+      "precision": 0.506,
+      "recall": 0.773,
+      "f1": 0.612,
+      "roc_auc": 0.839,
+      "accuracy": 0.74
+    },
+    "Random Forest": {
+      "precision": 0.614,
+      "recall": 0.484,
+      "f1": 0.541,
+      "roc_auc": 0.817,
+      "accuracy": 0.782
+    }
+  },
+  "ausgeschlossene_merkmale": [
+    "id",
+    "customer_id",
+    "created_at",
+    "total_charges"
+  ],
+  "ausschluss_total_charges_grund": "Korrelation 1.0 mit tenure*monthlyCharges"
+}
