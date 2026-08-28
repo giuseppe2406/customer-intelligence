@@ -1,2 +1,5 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+
+# Notebook-Ausgaben verzerren sonst die Sprachstatistik von GitHub
+*.ipynb linguist-documentation
